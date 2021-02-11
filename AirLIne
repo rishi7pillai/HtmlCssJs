@@ -1,0 +1,108 @@
+  
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Search Flight</title>
+
+
+ <Style>   
+    
+  .inner
+{
+    display: inline-block;
+    width:190px;
+}
+
+.button {
+    .button {
+    background-color: #ccccb3;
+  
+    color: #1a1a00;
+  
+
+    text-decoration: none;
+    display: inline-block;
+
+    cursor: pointer;
+    
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+} 
+</Style>
+</head>
+<body>
+  <div width=100% height=100%
+    style="min-width: 1000px min-height:1000px;">
+    <form action="servlet/reservations" method="post" >
+      <table border="1" width=41% align="center">
+        <tr>
+          <td colspan="3" height="60" align="center" valign="center"
+            bgcolor="#000080"><font size="6" color="#FFFFFF"><b>Airline Ticket Reservation</b></font></td>
+        </tr>
+        <tr>
+
+          <td height="150" width="160";><img id="imageToSwap" src="images/departurepng.png" width=100% height=120%></td>
+
+          <td height="150" width="160";><img src="images/planeepng.png"
+            alt="Airline" width=100% height=120%></td>
+
+          <td height="150" width="160";><img id="imageSwap" src="images/Arrivalpng.png" width=100% height=120%></td>
+        </tr>
+
+
+        <tr bgcolor="#c3c388">
+          <td colspan="3" height="80" style="line-height: 35px;"><b><font
+              size="5">Airport</font></b> <br /> 
+          From <select  id="fromAirport" NAME="fromAirport" style="width: 200px" onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);"
+            required>
+                <option value="" selected="selected" disabled required> Departure Airport</option>
+              <option >Calicut,India</option>
+              <option >Dubai, UAE</option>
+              <option >Jeddah, SaudiArabia</option>
+              <option >Sydney,Australia</option>
+              <option >Kuala Lumpur,Malaysia</option>
+              <option>Delhi, India</option>
+          </select>
+
+            <div class="Airport" style="float: right;">
+              To <select  id="toAirport" NAME="toAirport" style="width: 220px" onchange="$('#imageSwap').attr('src', this.options[this.selectedIndex].value);" required>
+                  <option value="" selected="selected" disabled required> Arrival Airport</option>
+                <option value="images/calicut-CCJ-png.png">Calicut,India</option>
+                <option value="images/dubai-DXB-png.png">Dubai, UAE</option>
+                <option value="images/jeddah-JED-png.png">Jeddah, SaudiArabia</option>
+                <option value="images/sydny-SYD-png.png">Sydney,Australia</option>
+                <option value="images/kaula-KUL-png.png">Kuala Lumpur,Malaysia</option>
+                <option value="images/delhi-DEL-png.png">Delhi, India</option>
+              </select>
+            </div>
+            <div id="test"></div></td>
+
+    
+
+        </tr>
+        <tr bgcolor="#c3c388">
+
+          <td colspan="3" align="left" height="40" style="line-height: 35px;">
+            <b><font size="4">Date: </font></b>"You should book one day before Travel..!"<br /> 
+              Depart <input type="text" id="dt1"   Name="depdt" style="width: 180px"  required>      
+          </td>
+
+        </tr>
+
+        <tr bgcolor="#8a8a5c">
+          <td colspan="3" align="right">
+          <div class="inner" style="float: right;" >
+          <input type="submit" value="Search" class="button">
+          </div>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>
